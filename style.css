@@ -1,0 +1,104 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap");
+
+/* ============= */
+/* CSS Variables */
+/* ============= */
+
+:root {
+  --mobile-width: 375px;
+  --desktop-width: 1440px;
+  --color-meter-gradient: linear-gradient(hsl(6, 100%, 80%), hsl(335, 100%, 65%));
+  --color-blue-400: hsl(243, 100%, 93%);
+  --color-blue-500: hsl(229, 7%, 55%);
+  --color-blue-600: hsl(229, 56%, 63%);
+  --color-blue-700: hsl(228, 56%, 26%);
+  --color-blue-800: hsl(229, 57%, 11%);
+  --font-size-body: 14px;
+  --font-size-display: 40px;
+  --font-family-body: Raleway, sans-serif;
+  --font-color-light: white;
+  --font-color-dark: #333;
+  --font-color-gray: var(--color-blue-500);
+  --body-bg-mobile: url("images/bg-mobile.png");
+  --body-bg-desktop: url("images/bg-desktop.png");
+}
+
+* {
+  /* Reset */
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+body {
+  background: var(--body-bg-mobile) center/cover no-repeat;
+  font-family: var(--font-family-body);
+  font-size: var(--font-size-body);
+
+  /* Center the content with the wrapper */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+/* Containing the content */
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  padding: 0 24px;
+}
+
+.wrapper > *:first-child {
+  margin-bottom: 16px;
+}
+
+header {
+  background: var(--color-blue-700);
+  border-radius: 10px 100px 10px 10px;
+  padding: 42px;
+  max-width: 350px;
+  width: 100%;
+}
+
+.logo {
+  width: 135px;
+  margin-bottom: 32px;
+}
+
+.MainMenu {
+  display: flex;
+}
+
+.MainMenu__item:not(:first-of-type) {
+  margin-left: 16px;
+}
+
+.MainMenu__link {
+  --square-size: 48px;
+  background: var(--color-blue-800);
+  border-radius: 10px;
+  display: block;
+  fill: var(--color-blue-600);
+  padding: 14px;
+  width: var(--square-size);
+  height: var(--square-size);
+}
+
+.MainMenu__link svg {
+  width: 100%;
+  height: 100%;
+}
+
+/* == Utilities == */
+
+.sr-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  opacity: 0;
+  top: -9999px;
+}
