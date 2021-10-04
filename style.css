@@ -50,6 +50,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  max-width: 920px;
   width: 100%;
   padding: 0 24px;
 }
@@ -69,6 +70,10 @@ header {
   border-top-right-radius: 100px;
   max-width: 350px;
   padding: 42px;
+}
+
+main {
+  max-width: 490px;
 }
 
 .logo {
@@ -174,6 +179,19 @@ main {
   color: var(--font-color-dark);
   font-size: 40px;
   margin-right: 12px;
+}
+
+/* == Media Queries == */
+
+@media (min-width: 921px) {
+  .wrapper {
+    flex-direction: row;
+  }
+
+  .wrapper > *:first-child {
+    margin-bottom: 0;
+    margin-right: 32px;
+  }
 }
 
 /* == Utilities == */
