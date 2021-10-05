@@ -105,13 +105,11 @@ main {
   height: 100%;
 }
 
-main {
-  padding: 34px;
-}
-
 .DataSection__details {
   color: var(--font-color-light);
   font-weight: var(--font-weight-base);
+  position: relative;
+  padding: 34px;
 }
 
 .DataSection__msg {
@@ -185,12 +183,53 @@ main {
 
 @media (min-width: 921px) {
   .wrapper {
+    align-items: flex-end;
     flex-direction: row;
   }
 
   .wrapper > *:first-child {
     margin-bottom: 0;
     margin-right: 32px;
+  }
+
+  .DataSection__details {
+    padding-top: 42px;
+  }
+
+  .DataSection__msg {
+    text-align: left;
+  }
+
+  .DataSection__meterWrap {
+    padding-bottom: 28px;
+  }
+
+  .DataSection__meterWrap::before,
+  .DataSection__meterWrap::after {
+    bottom: 0;
+  }
+
+  .DataSection__remainingSpace {
+    left: auto;
+    transform: none;
+    top: -47px;
+    right: 40px;
+
+    /* This adjustment accounts for the triangular extension beneath this corner of the element */
+    border-bottom-right-radius: 0;
+  }
+
+  .DataSection__remainingSpace::after {
+    --square-size: 22px;
+    border-top: var(--square-size) solid white;
+    border-left: var(--square-size) solid transparent;
+    content: '';
+    display: block;
+    width: 0;
+    height: 0;
+    position: absolute;
+    right: 0;
+    bottom: calc(var(--square-size) * -1);
   }
 }
 
