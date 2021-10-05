@@ -105,7 +105,7 @@ main {
   height: 100%;
 }
 
-.DataSection__details {
+.DataSection {
   color: var(--font-color-light);
   font-weight: var(--font-weight-base);
   position: relative;
@@ -192,7 +192,7 @@ main {
     margin-right: 32px;
   }
 
-  .DataSection__details {
+  .DataSection {
     padding-top: 42px;
   }
 
