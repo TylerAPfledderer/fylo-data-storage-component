@@ -34,7 +34,7 @@
 }
 
 body {
-  background: var(--body-bg-mobile) center/cover no-repeat;
+  background: var(--body-bg-mobile) center/cover no-repeat var(--color-blue-800);
   font-family: var(--font-family-body);
   font-size: var(--font-size-body);
 
@@ -198,6 +198,10 @@ main {
 /* == Media Queries == */
 
 @media (min-width: 921px) {
+  body {
+    background-image: var(--body-bg-desktop);
+  }
+
   .wrapper {
     align-items: flex-end;
     flex-direction: row;
