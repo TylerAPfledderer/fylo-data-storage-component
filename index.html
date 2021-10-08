@@ -60,8 +60,12 @@
       <main>
         <section class="DataSection">
           <p class="DataSection__msg">You've used <span class="text-highlight">815 GB</span> of your storage</p>
-          <div class="DataSection__meterWrap">
-            <meter min="0" max="1000" value="815">815 GB</meter>
+          <div class="DataSection__meterWrap" aria-hidden>
+            <div class="meter__outer">
+              <div class="meter__bar">
+                <!-- A value of 815 out of 1000, which is hard-coded to the width of this element, in percentage-->
+              </div>
+            </div>
           </div>
           <div class="DataSection__remainingSpace">
             <p>

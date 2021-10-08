@@ -147,11 +147,27 @@ main {
   width: 100%;
 }
 
-.DataSection__meterWrap meter::-webkit-meter-bar,
-.DataSection__meterWrap meter::-moz-meter-bar {
-  background: -webkit-gradient(linear, left top, right top, from(#ffa197), to(#ff4a95));
-  background: linear-gradient(90deg, #ffa197, #ff4a95);
+.meter__bar {
+  background: var(--color-meter-gradient, -webkit-gradient(linear, left top, right top, from(#ffa197), to(#ff4a95)));
   border-radius: inherit;
+  height: 100%;
+  position: relative;
+  width: calc((815 / 1000) * 100%);
+}
+
+.meter__bar::after {
+  --square-size: 10px;
+  background: white;
+  border-radius: 50%;
+  border: 1px solid transparent;
+  content: '';
+  display: block;
+  height: var(--square-size);
+  width: var(--square-size);
+  position: absolute;
+  right: 2px;
+  top: 50%;
+  transform: translateY(-50%);
 }
 
 .DataSection__remainingSpace {
